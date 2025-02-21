@@ -1,0 +1,112 @@
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 140px 20px 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Naslov i opis */
+.projects-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.projects-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Grid raspored */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Stil za svaku karticu */
+.project-card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Lista tehnologija */
+.tech-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-list li {
+  background: #333;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Linkovi */
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.project-links a {
+  color: #f39c12;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+  color: #ffa726;
+}
+
+/* Mobilna optimizacija */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 160px 15px 150px;
+  }
+
+  .projects-container h1 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}

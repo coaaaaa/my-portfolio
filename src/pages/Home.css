@@ -1,0 +1,62 @@
+.home-container {
+  text-align: center;
+  padding: 180px 20px 100px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Stilizacija naslova */
+.home-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Stilizacija opisa */
+.home-container p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Dugme sa modernim stilom */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  width: auto;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive dizajn */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 150px 15px 100px;
+  }
+
+  .home-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-container p {
+    font-size: 1.1rem;
+  }
+}

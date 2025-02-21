@@ -1,0 +1,76 @@
+.footer {
+  width: 100%;
+  background: var(--footer-bg);
+  color: var(--text-light); /* Svetlija boja teksta */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Kontejner unutar footera */
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bolji kontrast u svetlom modu */
+.light .footer {
+  background: #f4f4f4;
+  color: #333; /* Tamniji tekst za bolju čitljivost */
+}
+
+.light .footer-icon {
+  color: #333;
+}
+
+.light .footer-icon:hover {
+  color: #f39c12;
+}
+
+/* Tamni mod */
+.dark .footer {
+  background: #222;
+  color: #f4f4f4; /* Svetliji tekst u tamnom modu */
+}
+
+.dark .footer-icon {
+  color: #f4f4f4;
+}
+
+.dark .footer-icon:hover {
+  color: #f39c12;
+}
+
+/* Ikonice u footeru */
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  transition:
+    color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
