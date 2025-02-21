@@ -1,26 +1,29 @@
-# My Portfolio - Aleksandar Pajkanović
+# 🚀 My Portfolio - Aleksandar Pajkanović
 
-This is my personal portfolio website built using **React** and **Vite**. The project showcases my skills, projects, and allows visitors to contact me. It features **multi-language support**, **light/dark mode toggle**, and a **responsive design** with smooth animations.
+This is my **personal portfolio** website built using **React** and **Vite**. It showcases my skills, projects, and allows visitors to contact me. The site features **multi-language support**, **light/dark mode toggle**, a **responsive design**, and **smooth animations**.
 
 ## 🌟 Features
 
 ✅ **Multi-Language Support** (English & Serbian)  
 ✅ **Dark/Light Mode** with smooth transitions  
-✅ **Responsive Design** (Fully optimized for mobile & desktop)  
-✅ **Projects Section** (Displays my portfolio projects dynamically)  
-✅ **Animated UI** (Framer Motion for transitions & interactions)  
-✅ **Contact Form** (Allows users to send messages)  
-✅ **Hamburger Menu** (Mobile navigation)  
+✅ **Fully Responsive Design** (Optimized for mobile & desktop)  
+✅ **Projects Section** (Displays my portfolio dynamically)  
+✅ **Framer Motion Animations** (Smooth transitions & UI interactions)  
+✅ **Contact Form** (Allows visitors to reach out)  
+✅ **Hamburger Menu** (Mobile-friendly navigation)  
+✅ **Vercel Deployment** (Hosted online)  
 
-## 🚀 Technologies Used
+## 🛠 Technologies Used
 
 - **React** (Functional components & Hooks)
 - **Vite** (Fast development environment)
 - **React Router** (Client-side navigation)
-- **Framer Motion** (Smooth animations)
+- **Framer Motion** (Smooth animations & transitions)
 - **Context API** (State management for theme & language)
 - **CSS Modules** (Scoped styling)
-- **Responsive Design** (Fully mobile-friendly)
+- **Responsive Design** (Optimized for all devices)
+
+---
 
 ## 📸 Screenshots
 
@@ -28,12 +31,14 @@ This is my personal portfolio website built using **React** and **Vite**. The pr
 ![Dark Mode](https://via.placeholder.com/800x400)  
 ![Light Mode](https://via.placeholder.com/800x400)
 
-#### 📱 Responsive Mobile View
+#### 📱 Mobile Responsive View
 ![Mobile View](https://via.placeholder.com/400x800)
+
+---
 
 ## 🛠 Installation & Setup
 
-To run this project locally, follow these steps:
+Follow these steps to **run the project locally**:
 
 ### 1️⃣ Clone the Repository
 
