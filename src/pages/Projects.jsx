@@ -10,7 +10,7 @@ const projects = [
       en: "An interactive photo gallery with filtering and fullscreen view.",
       sr: "Interaktivna galerija sa filtriranjem i prikazom preko celog ekrana.",
     },
-    technologies: ["React", "CSS", "Unsplash API"], // Oznake ispod kartice
+    technologies: ["React", "CSS", "Unsplash API"],
     link: "https://github.com/yourgithub/photo-gallery",
     demo: "https://photo-gallery-demo.vercel.app/",
   },
@@ -21,9 +21,9 @@ const projects = [
       en: "A simple task manager app to track daily tasks with local storage.",
       sr: "Jednostavna aplikacija za upravljanje zadacima sa lokalnim skladištem.",
     },
-    technologies: ["React", "useState", "LocalStorage"], // Oznake
-    link: "https://github.com/yourgithub/task-manager",
-    demo: "https://task-manager-demo.vercel.app/",
+    technologies: ["React", "useState", "LocalStorage"],
+    link: "https://github.com/coaaaaa/task-manager",
+    demo: "https://task-manager-nine-bice.vercel.app",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const projects = [
       en: "A basic e-commerce site using fake API for product listings.",
       sr: "Osnovna e-trgovina koristeći lažni API za prikaz proizvoda.",
     },
-    technologies: ["React", "React Router", "FakeStore API"], // Oznake
+    technologies: ["React", "React Router", "FakeStore API"],
     link: "https://github.com/yourgithub/ecommerce-shop",
     demo: "https://ecommerce-demo.vercel.app/",
   },
