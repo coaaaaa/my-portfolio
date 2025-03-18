@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
-import { useTheme } from "../context/ThemeContext";
+import useTheme from "../context/useTheme"; // Ispravljeno: sada koristimo useTheme.js
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "../assets/images/logo.png";
+import logoLight from "../assets/images/logo-light.webp";
+import logoDark from "../assets/images/logo-dark.webp";
 
 function Navbar() {
   const { language, toggleLanguage, translations } = useLanguage();
@@ -25,7 +26,13 @@ function Navbar() {
     >
       <div className="nav-container">
         <Link to="/" className="logo">
-          <img src={logo} alt="Logo" className="logo-img" />
+          {/* Promena logotipa na osnovu teme */}
+          <img
+            src={theme === "dark" ? logoDark : logoLight}
+            loading="lazy"
+            alt="Logo"
+            className="logo-img"
+          />
         </Link>
 
         {/* Hamburger Menu Icon */}
