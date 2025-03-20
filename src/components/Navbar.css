@@ -1,6 +1,7 @@
+/* Globalna podešavanja Navbar-a */
 .navbar {
   width: 100%;
-  background: var(--footer-bg);
+  background: var(--navbar-bg);
   color: var(--text-color);
   padding: 15px 0;
   position: fixed;
@@ -20,13 +21,27 @@
   padding: 0 20px;
 }
 
+/* ✅ POPRAVLJENO – Linkovi su sada vidljivi na desktop verziji */
 .nav-links {
   list-style: none;
-  display: flex;
+  display: flex; /* Omogućava prikaz na desktop verziji */
   gap: 20px;
   align-items: center;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
+/* ✅ Na desktop verziji linkovi su uvek vidljivi */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+  }
+}
+
+/* ✅ Poboljšano dugme za linkove */
 .nav-links a {
   color: var(--text-color);
   text-decoration: none;
@@ -40,7 +55,7 @@
   color: var(--btn-hover);
 }
 
-/* Hamburger Menu Button */
+/* Dugme za otvaranje menija */
 .menu-toggle {
   display: none;
   background: none;
@@ -50,7 +65,7 @@
   cursor: pointer;
 }
 
-/* Responsive Navbar */
+/* ✅ Ispravljena mobilna verzija */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -63,36 +78,21 @@
     width: 100%;
     background: var(--footer-bg);
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     gap: 15px;
     padding: 20px 0;
     opacity: 0;
     transform: translateY(-10px);
     transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
+      opacity 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
     display: none;
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex !important;
     opacity: 1;
     transform: translateY(0);
-  }
-
-  [data-theme="light"] .nav-links {
-    background: #ddd;
-  }
-
-  [data-theme="light"] .nav-links a {
-    color: #222;
-  }
-
-  [data-theme="light"] .nav-links a:hover {
-    color: #f39c12;
-  }
-
-  [data-theme="light"] .menu-toggle {
-    color: #222;
   }
 }

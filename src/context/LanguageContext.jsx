@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 import PropTypes from "prop-types";
 
 const LanguageContext = createContext();
@@ -66,3 +66,5 @@ LanguageProvider.propTypes = {
 export const useLanguage = () => {
   return useContext(LanguageContext);
 };
+
+export default LanguageContext;

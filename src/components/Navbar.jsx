@@ -1,21 +1,31 @@
 import { Link } from "react-router-dom";
-import { useLanguage } from "../context/LanguageContext";
-import useTheme from "../context/useTheme"; // Ispravljeno: sada koristimo useTheme.js
+import { useLanguage } from "@context/LanguageContext";
+import { useTheme } from "@context/ThemeContext";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { useState, useCallback, useEffect } from "react";
 import "./Navbar.css";
-import logoLight from "../assets/images/logo-light.webp";
-import logoDark from "../assets/images/logo-dark.webp";
+import logoLight from "@assets/images/logo-light.webp";
+import logoDark from "@assets/images/logo-dark.webp";
 
 function Navbar() {
   const { language, toggleLanguage, translations } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth > 768) setMenuOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleMenu = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+  }, []);
 
   return (
     <motion.nav
@@ -26,59 +36,56 @@ function Navbar() {
     >
       <div className="nav-container">
         <Link to="/" className="logo">
-          {/* Promena logotipa na osnovu teme */}
           <img
             src={theme === "dark" ? logoDark : logoLight}
-            loading="lazy"
             alt="Logo"
             className="logo-img"
           />
         </Link>
 
-        {/* Hamburger Menu Icon */}
-        <button className="menu-toggle" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        {/* Mobile menu button */}
+        {isMobile && (
+          <button
+            className="menu-toggle"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        )}
 
-        {/* Navigation Links */}
-        <AnimatePresence>
-          <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-            <li>
-              <Link to="/" onClick={() => setMenuOpen(false)}>
-                {translations[language].home}
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" onClick={() => setMenuOpen(false)}>
-                {translations[language].projects}
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={() => setMenuOpen(false)}>
-                {translations[language].contact}
-              </Link>
-            </li>
-            <li>
-              <button className="language-btn" onClick={toggleLanguage}>
-                {language === "en" ? "🇬🇧 EN" : "🇷🇸 SR"}
-              </button>
-            </li>
-            <li>
-              <motion.button
-                className="theme-btn"
-                onClick={toggleTheme}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                {theme === "light" ? (
-                  <FaMoon className="theme-icon" />
-                ) : (
-                  <FaSun className="theme-icon" />
-                )}
-              </motion.button>
-            </li>
-          </ul>
-        </AnimatePresence>
+        <ul className={`nav-links ${isMobile && menuOpen ? "open" : ""}`}>
+          <li>
+            <Link to="/" onClick={() => isMobile && toggleMenu()}>
+              {translations[language]?.home || "Home"}
+            </Link>
+          </li>
+          <li>
+            <Link to="/projects" onClick={() => isMobile && toggleMenu()}>
+              {translations[language]?.projects || "Projects"}
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={() => isMobile && toggleMenu()}>
+              {translations[language]?.contact || "Contact"}
+            </Link>
+          </li>
+          <li>
+            <button className="language-btn" onClick={toggleLanguage}>
+              {language === "en" ? "🇬🇧 EN" : "🇷🇸 SR"}
+            </button>
+          </li>
+          <li>
+            <motion.button
+              className="theme-btn"
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {theme === "light" ? <FaMoon /> : <FaSun />}
+            </motion.button>
+          </li>
+        </ul>
       </div>
     </motion.nav>
   );

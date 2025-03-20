@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
 const ThemeContext = createContext();
@@ -26,4 +26,8 @@ ThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export { ThemeContext };
+export const useTheme = () => {
+  return useContext(ThemeContext);
+};
+
+export default ThemeContext;

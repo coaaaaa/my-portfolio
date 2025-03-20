@@ -24,7 +24,7 @@ body {
   --text-color: #333;
   --navbar-bg: #ffffff;
   --footer-bg: #222;
-  --btn-bg: #f39c12;
+  --btn-bg: #222;
   --btn-hover: #f39c12;
   --accent-color: #f39c12;
 }
@@ -82,7 +82,7 @@ body {
   color: var(--accent-color);
 }
 
-/* Buttons for language and theme toggle */
+/* Dugmad za jezik i modove */
 .language-btn,
 .theme-btn {
   background: none;
@@ -106,7 +106,7 @@ body {
   color: white;
 }
 
-/* Buttons */
+/* Dugmad */
 .btn {
   display: inline-block;
   padding: 12px 20px;
@@ -115,19 +115,18 @@ body {
   text-align: center;
   text-transform: uppercase;
   border-radius: 8px;
-  border: 2px solid var(--btn-hover);
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-primary {
-  background-color: white;
-  color: var(--btn-hover);
+  background-color: var(--btn-hover);
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--btn-hover);
-  color: white;
+  background-color: #e67e22;
   transform: scale(1.05);
 }
 
