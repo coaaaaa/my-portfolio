@@ -1,4 +1,4 @@
-/* Reset osnovnih stilova */
+/* ===== Global Reset ===== */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ body {
     color 0.3s ease-in-out;
 }
 
-/* Light mode (default) */
+/* ===== Light & Dark Mode Variables ===== */
 :root {
   --bg-color: #f4f4f4;
   --text-color: #333;
@@ -29,7 +29,6 @@ body {
   --accent-color: #f39c12;
 }
 
-/* Dark mode */
 [data-theme="dark"] {
   --bg-color: #1a1a1a;
   --text-color: #f4f4f4;
@@ -39,74 +38,7 @@ body {
   --btn-hover: #ffa726;
 }
 
-/* Navbar */
-.navbar {
-  width: 100%;
-  background: var(--navbar-bg);
-  color: var(--text-color);
-  padding: 15px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  transition: background 0.3s ease-in-out;
-}
-
-.nav-container {
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease-in-out;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover {
-  color: var(--accent-color);
-}
-
-/* Dugmad za jezik i modove */
-.language-btn,
-.theme-btn {
-  background: none;
-  border: none;
-  color: var(--text-color);
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 10px;
-  border-radius: 6px;
-  transition:
-    background 0.3s ease-in-out,
-    color 0.3s ease-in-out;
-}
-
-.language-btn:hover,
-.theme-btn:hover {
-  background: var(--btn-hover);
-  color: white;
-}
-
-/* Dugmad */
+/* ===== BUTTON STYLES ===== */
 .btn {
   display: inline-block;
   padding: 12px 20px;
@@ -140,7 +72,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 .footer {
   width: 100%;
   background: var(--footer-bg);
@@ -183,7 +115,7 @@ body {
   transform: scale(1.2);
 }
 
-/* Kontakt forma */
+/* ===== CONTACT FORM ===== */
 .contact-container {
   max-width: 800px;
   margin: auto;
@@ -236,7 +168,7 @@ textarea {
   resize: none;
 }
 
-/* Responsive design */
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

@@ -1,3 +1,4 @@
+/* Main container for the home section */
 .home-container {
   text-align: center;
   padding: 180px 20px 100px;
@@ -5,7 +6,7 @@
   margin: auto;
 }
 
-/* Stilizacija naslova */
+/* Title styling */
 .home-container h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -13,7 +14,7 @@
   color: var(--text-color);
 }
 
-/* Stilizacija opisa */
+/* Description styling */
 .home-container p {
   font-size: 1.3rem;
   margin-bottom: 30px;
@@ -21,7 +22,7 @@
   line-height: 1.6;
 }
 
-/* Dugme sa modernim stilom */
+/* Primary button with modern styling */
 .btn-primary {
   display: inline-block;
   padding: 12px 24px;
@@ -47,7 +48,7 @@
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive dizajn */
+/* Responsive design */
 @media (max-width: 768px) {
   .home-container {
     padding: 150px 15px 100px;

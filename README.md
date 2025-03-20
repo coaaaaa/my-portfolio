@@ -11,7 +11,7 @@ This is my **personal portfolio** website built using **React** and **Vite**. It
 ✅ **Framer Motion Animations** (Smooth transitions & UI interactions)  
 ✅ **Contact Form** (Allows visitors to reach out)  
 ✅ **Hamburger Menu** (Mobile-friendly navigation)  
-✅ **Vercel Deployment** (Hosted online)  
+✅ **Vercel Deployment** (Hosted online)
 
 ## 🛠 Technologies Used
 
@@ -28,11 +28,13 @@ This is my **personal portfolio** website built using **React** and **Vite**. It
 ## 📸 Screenshots
 
 #### 🌑 Dark Mode & Light Mode
-![Dark Mode](https://via.placeholder.com/800x400)  
-![Light Mode](https://via.placeholder.com/800x400)
+
+![Dark Mode](https://i.imgur.com/9qeqAWy.png)  
+![Light Mode](https://i.imgur.com/obIUWBG.png)
 
 #### 📱 Mobile Responsive View
-![Mobile View](https://via.placeholder.com/400x800)
+
+![Mobile View](https://i.imgur.com/XUyhT0w.png)
 
 ---
 
@@ -46,3 +48,4 @@ Follow these steps to **run the project locally**:
 git clone https://github.com/coaaaaa/my-portfolio.git
 cd my-portfolio
 
+```

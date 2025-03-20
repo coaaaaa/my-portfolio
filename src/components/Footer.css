@@ -1,7 +1,8 @@
+/* Main Footer Styling */
 .footer {
   width: 100%;
   background: var(--footer-bg);
-  color: var(--text-light); /* Svetlija boja teksta */
+  color: var(--text-light);
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -9,9 +10,12 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
-/* Kontejner unutar footera */
+/* Footer container layout */
 .footer-container {
   width: 100%;
   max-width: 1200px;
@@ -21,40 +25,13 @@
   align-items: center;
 }
 
-/* Bolji kontrast u svetlom modu */
-.light .footer {
-  background: #f4f4f4;
-  color: #333; /* Tamniji tekst za bolju čitljivost */
-}
-
-.light .footer-icon {
-  color: #333;
-}
-
-.light .footer-icon:hover {
-  color: #f39c12;
-}
-
-/* Tamni mod */
-.dark .footer {
-  background: #222;
-  color: #f4f4f4; /* Svetliji tekst u tamnom modu */
-}
-
-.dark .footer-icon {
-  color: #f4f4f4;
-}
-
-.dark .footer-icon:hover {
-  color: #f39c12;
-}
-
-/* Ikonice u footeru */
+/* Footer links (social icons) */
 .footer-links {
   display: flex;
   gap: 20px;
 }
 
+/* Social media icons */
 .footer-icon {
   font-size: 1.5rem;
   transition:
@@ -62,8 +39,38 @@
     transform 0.3s ease-in-out;
 }
 
+/* Icon hover effect */
 .footer-icon:hover {
   transform: scale(1.2);
+  color: var(--btn-hover);
+}
+
+/* Light Mode Adjustments */
+[data-theme="light"] .footer {
+  background: #f4f4f4;
+  color: #333;
+}
+
+[data-theme="light"] .footer-icon {
+  color: #333;
+}
+
+[data-theme="light"] .footer-icon:hover {
+  color: #f39c12;
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .footer {
+  background: #222;
+  color: #f4f4f4;
+}
+
+[data-theme="dark"] .footer-icon {
+  color: #f4f4f4;
+}
+
+[data-theme="dark"] .footer-icon:hover {
+  color: #f39c12;
 }
 
 /* Responsive Footer */

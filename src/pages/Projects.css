@@ -1,3 +1,4 @@
+/* Main container for projects */
 .projects-container {
   max-width: 1200px;
   margin: auto;
@@ -8,7 +9,7 @@
   align-items: center;
 }
 
-/* Naslov i opis */
+/* Title and description */
 .projects-container h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -23,7 +24,7 @@
   line-height: 1.6;
 }
 
-/* Grid raspored */
+/* Responsive grid layout for project cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -34,7 +35,7 @@
   max-width: 1000px;
 }
 
-/* Stil za svaku karticu */
+/* Styling for individual project cards */
 .project-card {
   background: var(--card-bg);
   color: var(--text-color);
@@ -52,7 +53,7 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Lista tehnologija */
+/* Technologies used (tags) */
 .tech-list {
   display: flex;
   justify-content: center;
@@ -71,7 +72,7 @@
   color: white;
 }
 
-/* Linkovi */
+/* Links to GitHub and Live Demo */
 .project-links {
   display: flex;
   justify-content: center;
@@ -91,7 +92,7 @@
   color: #ffa726;
 }
 
-/* Mobilna optimizacija */
+/* Mobile optimization */
 @media (max-width: 768px) {
   .projects-container {
     padding: 160px 15px 150px;

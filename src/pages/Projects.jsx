@@ -68,14 +68,14 @@ function Projects() {
             <h2>{project.title[language]}</h2>
             <p>{project.description[language]}</p>
 
-            {/* TEHNOLOŠKE OZNAKE */}
+            {/* Technologies used */}
             <ul className="tech-list">
               {project.technologies.map((tech, index) => (
                 <li key={index}>{tech}</li>
               ))}
             </ul>
 
-            {/* GITHUB I LIVE DEMO LINKOVI */}
+            {/* GitHub and Live Demo links */}
             <div className="project-links">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 GitHub
